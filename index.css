@@ -1,0 +1,82 @@
+/* -- Imports -- */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* -- Roots -- */
+:root {
+    --primary-color-turqoise: #00BCB0;
+    --secondary-color-orange: #F5793B;
+    --secondary-color-black: #121212; 
+    --secondary-color-white: #F2F2F2;
+
+    --tertiary-color-white: #fff;
+    --tertiary-color-black: #000;
+
+    --font-family-fredoka: 'Fredoka', sans-serif;
+    --font-family-quicksand: 'Quicksand', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -- Section 1 centered text -- */
+.section-1 {
+    min-height: 100vh;
+    background-color: var(--tertiary-color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-div {
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text-div h1 {
+    font-size: 128px;
+    font-family: var(--font-family-fredoka);
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+.text-div p {
+    font-size: 28px;
+    font-family: var(--font-family-quicksand);
+    font-weight: 400;
+}
+.text-div .body {
+    text-align: center;
+}
+.text-div .cta {
+    margin: 20px 0px;
+    font-weight: 600;
+}
+.text-div .social {
+    width: 275px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 0px;
+}
+.text-div .social:hover {
+    cursor: pointer;
+}
+/* -- Media queries -- */
+@media screen and (max-width: 736px) {
+    .text-div {
+        width: 80%;
+    }
+    .text-div h1 {
+        font-size: 70px;
+    }
+    .text-div p {
+        font-size: 18px;
+    }
+    .text-div .social {
+        position: fixed;
+        bottom: 0;
+    }
+}

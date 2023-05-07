@@ -1,4 +1,6 @@
-window.addEventListener("scroll", function () {
-    let header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 0);
+const menuHamburger = document.querySelector(".menu-hamburger")
+const navLinks = document.querySelector(".nav-links")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
 })
