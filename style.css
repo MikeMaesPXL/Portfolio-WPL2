@@ -1,8 +1,19 @@
+/* -- Imports -- */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* -- Roots -- */
 :root {
     --primary-color-turqoise: #00BCB0;
     --secondary-color-orange: #F5793B;
     --secondary-color-black: #373E45;
     --secondary-color-white: #F2F2F2;
+
+    --tertiary-color-white: #fff;
+    --tertiary-color-black: #000;
+
+    --font-family-fredoka: 'Fredoka', sans-serif;
+    --font-family-quicksand: 'Quicksand', sans-serif;
 }
 * {
     margin: 0;
@@ -10,9 +21,10 @@
     box-sizing: border-box;
 }
 body {
-    background: #fff;
-    min-height: 200vh;
+    background: var(--tertiary-color-white);
+    min-height: 100vh;
 }
+/* -- Webkits -- */
 body::-webkit-scrollbar {
     display: none;
 }
@@ -30,10 +42,10 @@ header {
     padding: 40px 100px;
     z-index: 1000;
 }
-header.sticky {
+/* header.sticky {
     padding: 20px 100px;
     background: var(--secondary-color-black);
-}
+} */
 header .logo {
     position: relative;
     font-weight: 700;
@@ -58,12 +70,15 @@ header ul li a {
     position: relative;
     margin: 0 15px;
     text-decoration: none;
+    font-family: var(--font-family-fredoka);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
     color: #000;
     letter-spacing: 2px;
-    font-weight: 500;
     transition: 0.6s;
 }
-header.sticky .logo,
+/* header.sticky .logo,
 header.sticky ul li a {
     color: #fff;
-}
+} */
