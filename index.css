@@ -90,6 +90,27 @@
 .text-div .social:hover {
     cursor: pointer;
 }
+/* - Text animation - */
+.overflow-hidden {
+    overflow: hidden;
+}
+.drop-down {
+    animation: drop-down 2s ease 200ms backwards;
+}
+.drop-down-2 {
+    animation: drop-down 2.5s ease 650ms backwards;
+}
+@keyframes drop-down {
+    from {
+     opacity: 0;
+     transform: translateY(-100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+}
+
 
 /* -- Section 2 -- */
 .section-2 {
@@ -100,7 +121,58 @@
 /* -- Section 3 -- */
 .section-3 {
     min-height: 100vh;
-    background-color: lightblue;
+    display: flex;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #343f4f; */
+}
+/* - Image Carousel - */
+.wrapper {
+    max-width: 1200px;
+    position: relative;
+}
+.wrapper i {
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 46px;
+    background: var(--primary-color-turqoise);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.wrapper i:first-child {
+    left: -23px;
+    display: none;
+}
+.wrapper i:last-child {
+    right: -23px;
+}
+.wrapper .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.carousel.dragging img {
+    pointer-events: none;
+}
+.carousel img {
+    height: 340px;
+    object-fit: cover;
+    margin-left: 14px;
+    width: calc(100% / 3);
+}
+.carousel img:first-child {
+    margin-left: 0px;
 }
 
 /* -- Section 4 -- */
@@ -116,7 +188,14 @@
 }
 
 /* -- Media queries -- */
+@media screen and (max-width: 900px) {
+    .carousel img {
+        width: calc(100% / 2);
+    }
+}
+
 @media screen and (max-width: 736px) {
+    /* -- Section 1 -- */
     .text-div {
         width: 80%;
     }
@@ -130,4 +209,15 @@
         position: fixed;
         bottom: 0;
     }
+
+    /* -- Section 2 -- */
+
+    /* -- Section 3 -- */
+    .carousel img {
+        width: calc(100%);
+    }
+
+    /* -- Section 4 -- */
+    
+    /* -- Section 5 -- */
 }
