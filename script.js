@@ -1,4 +1,4 @@
-// Burger menu
+// -- Burger menu --
 const menuHamburger = document.querySelector(".menu-hamburger")
 const navLinks = document.querySelector(".nav-links")
 
@@ -6,7 +6,9 @@ const navLinks = document.querySelector(".nav-links")
     navLinks.classList.toggle('mobile-menu')
 })
 
-// Image carousel
+
+
+// -- Image carousel --
 const carousel = document.querySelector(".carousel");
 firstImg = carousel.querySelectorAll("img")[0];
 arrowIcons = document.querySelectorAll(".wrapper i");
@@ -79,3 +81,49 @@ carousel.addEventListener("touchmove", dragging);
 carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mouseleave", dragStop);
 carousel.addEventListener("touchend", dragStop);
+
+
+
+// -- Change color of nav on section scroll --
+const header = document.querySelector("header");
+const sectionTwo = document.querySelector(".section-2");
+const sectionThree = document.querySelector(".section-3");
+const sectionFour = document.querySelector(".section-4");
+
+const sectionOptions = {
+    rootMargin: "-50px 0px 0px 0px",
+    threshold: 0,
+};
+
+// const sectionLightObserver = new IntersectionObserver(
+//     function(
+//         entries
+//     ) {
+//     entries.forEach(entry => {
+//         console.log(header.classList);
+//         if(!entry.isIntersecting) {
+//             header.classList.add('nav-scroll');
+//         } else {
+//             header.classList.remove('nav-scroll');
+//         }
+//     })
+// }, sectionOptions);
+
+const sectionDarkObserver = new IntersectionObserver(
+    function(
+        entries
+    ) {
+    entries.forEach(entry => {
+        console.log(header.classList);
+        if(!entry.isIntersecting) {
+            console.log("entering the light...");
+            header.classList.remove('nav-scroll');
+        } else {
+            console.log("entering the dark...");
+            header.classList.add('nav-scroll');
+        }
+    })
+}, sectionOptions);
+
+sectionDarkObserver.observe(sectionTwo);
+sectionDarkObserver.observe(sectionThree);

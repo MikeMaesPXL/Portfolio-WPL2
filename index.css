@@ -6,6 +6,7 @@
 :root {
     --primary-color-turqoise: #00BCB0;
     --secondary-color-orange: #F5793B;
+    --secondary-color-dark-blue: #343F4F;
     --secondary-color-black: #121212; 
     --secondary-color-white: #F2F2F2;
 
@@ -115,19 +116,32 @@
 /* -- Section 2 -- */
 .section-2 {
     min-height: 100vh;
-    background-color: lightcoral;
+    background-color: var(--secondary-color-dark-blue);
 }
 
 /* -- Section 3 -- */
 .section-3 {
-    min-height: 100vh;
+    min-height: 400vh;
+    /* display: flex;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center; */
+}
+.gallery-text {
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* - Image Carousel - */
+.container-gallery {
+    margin-top: 300px;
+    border: 2px solid red;
     display: flex;
     padding: 0 35px;
     align-items: center;
     justify-content: center;
-    /* background-color: #343f4f; */
 }
-/* - Image Carousel - */
 .wrapper {
     max-width: 1200px;
     position: relative;
@@ -143,6 +157,7 @@
     line-height: 46px;
     background: var(--primary-color-turqoise);
     border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px, rgba(0, 0, 0, 0.4) 0px 7px 13px -3px, rgba(0, 0, 0, 0.3) 0px -3px 0px inset;
     transform: translateY(-50%);
 }
 .wrapper i:first-child {
@@ -166,7 +181,7 @@
     pointer-events: none;
 }
 .carousel img {
-    height: 340px;
+    height: 360px;
     object-fit: cover;
     margin-left: 14px;
     width: calc(100% / 3);
@@ -177,14 +192,13 @@
 
 /* -- Section 4 -- */
 .section-4 {
-    min-height: 100vh;
-    background-color: lightgoldenrodyellow;
+    height: 100vh;
+    background-color: var(--secondary-color-dark-blue);
 }
 
 /* -- Section 5 -- */
 .section-5 {
     min-height: 30vh;
-    background-color: lightsalmon;
 }
 
 /* -- Media queries -- */
