@@ -121,22 +121,74 @@
 
 /* -- Section 3 -- */
 .section-3 {
-    min-height: 400vh;
-    /* display: flex;
-    padding: 0 35px;
-    align-items: center;
-    justify-content: center; */
-}
-.gallery-text {
-    border: 2px solid blue;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+.gallery-text {
+    margin-bottom: 75px;
+    width: 100%;
+    height: auto;
+}
+.gallery-text .title {
+    text-align: center;
+    font-size: 4rem;
+    font-family: var(--font-family-fredoka);
+    font-weight: 300;
+}
+.gallery-cta {
+    margin-top: 75px;
+}
+.button-gallery a {
+    text-decoration: none;
+    color: var(--secondary-color-black);
+}
+.button-gallery {
+    align-items: center;
+    appearance: none;
+    background-color: var(--primary-color-turqoise);
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px, rgba(0, 0, 0, 0.4) 0px 7px 13px -3px, rgba(0, 0, 0, 0.3) 0px -3px 0px inset;
+    box-sizing: border-box;
+    color: #f4a724;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+.button-gallery:focus {
+    box-shadow: var(--secondary-color-black) 0 0 0 1.5px inset, rgba(0, 0, 0, 0.5) 0 2px 4px, rgba(0, 0, 0, 0.4) 0 7px 13px -3px, var(--secondary-color-black) 0 -3px 0 inset;
+}
+.button-gallery:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0 4px 8px, rgba(0, 0, 0, 0.4) 0 7px 13px -3px, rgba(7, 132, 195, 0.3) 0 -2px 0 inset;
+    transform: translateY(-2px);
+}
+.button-gallery:active {
+    box-shadow: var(--secondary-color-black) 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
 /* - Image Carousel - */
-.container-gallery {
-    margin-top: 300px;
-    border: 2px solid red;
+.container-carousel {
     display: flex;
     padding: 0 35px;
     align-items: center;
@@ -159,6 +211,12 @@
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px, rgba(0, 0, 0, 0.4) 0px 7px 13px -3px, rgba(0, 0, 0, 0.3) 0px -3px 0px inset;
     transform: translateY(-50%);
+}
+.wrapper i:active {
+    box-shadow: var(--secondary-color-black) 0 3px 7px inset;
+}
+.wrapper i:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0 4px 8px, rgba(0, 0, 0, 0.4) 0 7px 13px -3px, rgba(7, 132, 195, 0.3) 0 -2px 0 inset;
 }
 .wrapper i:first-child {
     left: -23px;
@@ -198,7 +256,7 @@
 
 /* -- Section 5 -- */
 .section-5 {
-    min-height: 30vh;
+    min-height: 50vh;
 }
 
 /* -- Media queries -- */
@@ -229,6 +287,15 @@
     /* -- Section 3 -- */
     .carousel img {
         width: calc(100%);
+    }
+    .button-gallery {
+        padding: 0 40px;
+    }
+    .gallery-text .title {
+        font-size: 48px;
+    }
+    .gallery-cta {
+        margin-top: 50px;
     }
 
     /* -- Section 4 -- */
