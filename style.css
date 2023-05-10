@@ -4,10 +4,10 @@
 
 /* -- Roots -- */
 :root {
-    --primary-color-turqoise: #00BCB0;
-    --secondary-color-orange: #F5793B;
-    --secondary-color-black: #121212; 
-    --secondary-color-white: #F2F2F2;
+    --primary-color: #00BCB0;
+    --secondary-color: #F5793B;
+    --color-text: #121212; 
+    --off-white: #F2F2F2;
 
     --tertiary-color-white: #fff;
     --tertiary-color-black: #000;
@@ -20,16 +20,27 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+/* body {
     background: var(--tertiary-color-white);
     min-height: 100vh;
-}
+} */
 /* -- Webkits -- */
 body::-webkit-scrollbar {
     display: none;
 }
 
 /* -- Navigation -- */
+/* - Inversing the nav - */
+.nav-no-scroll {
+    --primary-color: #00BCB0;
+    --secondary-color: #F5793B;
+    --color-text: #121212;
+}
+.nav-scroll {
+    --primary-color: #F5793B;
+    --secondary-color: #00BCB0;
+    --color-text: #fff;
+}
 header {
     position: fixed;
     top: 0;
@@ -43,16 +54,6 @@ header {
     padding: 20px 100px;
     z-index: 1000;
 }
-/* header .logo {
-    position: relative;
-    font-weight: 700;
-    color: var(--tertiary-color-black);
-    text-decoration: none;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 1.2s;
-} */
 header .logo img {
     height: 80px;
 }
@@ -73,12 +74,12 @@ header ul li a {
     font-family: var(--font-family-fredoka);
     font-weight: 300;
     font-size: 16px;
-    color: var(--secondary-color-black);
+    color: var(--color-text);
     letter-spacing: 2px;
     transition: 1.2s;
 }
 header ul li a:hover {
-    color: var(--secondary-color-orange);
+    color: var(--secondary-color);
     transition: 0.6s;
 }
 header .menu-hamburger {
@@ -93,7 +94,6 @@ header .menu-hamburger {
     header .logo img {
         height: 60px;
     }
-
     header {
         padding: 0;
     }
@@ -116,7 +116,7 @@ header .menu-hamburger {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: -100%;
+        margin-left: 200%;
         transition: 0.3s ease-in-out;
     }
     .nav-links.mobile-menu {
@@ -131,7 +131,7 @@ header .menu-hamburger {
         margin: 35px 0;
     }
     header .nav-links ul li a {
-        color: var(--primary-color-turqoise);
+        color: var(--primary-color);
         font-weight: 400;
         font-size: 20px;
     }
