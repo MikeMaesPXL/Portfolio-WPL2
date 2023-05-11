@@ -86,6 +86,7 @@ carousel.addEventListener("touchend", dragStop);
 
 // -- Change color of nav on section scroll --
 const header = document.querySelector("header");
+const sectionOne = document.querySelector(".section-1");
 const sectionTwo = document.querySelector(".section-2");
 const sectionThree = document.querySelector(".section-3");
 const sectionFour = document.querySelector(".section-4");
@@ -125,5 +126,6 @@ const sectionDarkObserver = new IntersectionObserver(
     })
 }, sectionOptions);
 
+// sectionDarkObserver.observe(sectionOne);
 sectionDarkObserver.observe(sectionTwo);
 sectionDarkObserver.observe(sectionThree);
