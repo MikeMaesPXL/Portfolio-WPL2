@@ -107,6 +107,28 @@
 .section-2 {
     min-height: 100vh;
     background-color: var(--secondary-color-dark-blue);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.image-wrapper {
+    width: 30%;
+    margin: 0% 10%;
+    /* border: 5px solid red; */
+    height: 75vh;
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.image-wrapper img {
+    border-bottom: 5px solid var(--primary-color-turqoise);
+    border-radius: 10px;
+}
+.text-wrapper {
+    width: 50%;
+    border: 5px solid blue;
+    height: 100vh;
 }
 
 /* -- Section 3 -- */
@@ -337,10 +359,10 @@ form input, form textarea {
     outline: none;
     background-color: var(--secondary-color-white);
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 400;
     font-family: var(--font-family-quicksand);
 }
-form button a {
+form button {
     text-decoration: none;
     color: var(--secondary-color-black);
 }
