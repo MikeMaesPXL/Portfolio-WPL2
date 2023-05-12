@@ -81,16 +81,6 @@
     margin: 20px 0px;
     font-weight: 600;
 }
-.social {
-    width: 275px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 35px 0px;
-}
-.text-div .social:hover {
-    cursor: pointer;
-}
 /* - Text animation - */
 .overflow-hidden {
     overflow: hidden;
@@ -256,8 +246,19 @@
 
 /* -- Section 5 -- */
 .section-5 {
-    min-height: 50vh;
+    min-height: 100vh;
 }
+.social {
+    width: 275px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 0px;
+}
+.social:hover {
+    cursor: pointer;
+}
+
 
 /* -- Media queries -- */
 @media screen and (max-width: 900px) {
@@ -276,10 +277,6 @@
     }
     .text-div p {
         font-size: 18px;
-    }
-    .text-div .social {
-        position: fixed;
-        bottom: 0;
     }
 
     /* -- Section 2 -- */

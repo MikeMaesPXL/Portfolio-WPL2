@@ -127,3 +127,22 @@ const sectionDarkObserver = new IntersectionObserver(
 
 sectionDarkObserver.observe(sectionTwo);
 sectionDarkObserver.observe(sectionThree);
+
+
+// -- Image pop up on click --
+// let img = document.querySelectorAll("tile-img");
+
+// img.addEventListener('click', () => {
+//     img.style.transform = "scale(1.5)";
+//     img.style.transition = "transform 0.25s ease";
+// });
+
+// const imageResize = () => {
+//     img.style.transform = "scale(1.5)";
+//     img.style.transition = "transform 0.25s ease";
+// }
+
+// const imageReset = () => {
+//     img.style.transform = "scale(1)";
+//     img.style.transition = "transform 0.25s ease";
+// }
