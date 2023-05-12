@@ -87,6 +87,7 @@ header .menu-hamburger {
     position: absolute;
     top: 35px;
     right: 35px;
+    color: var(--color-text);
 }
 
 /* -- Media queries -- */
@@ -131,7 +132,7 @@ header .menu-hamburger {
         margin: 35px 0;
     }
     header .nav-links ul li a {
-        color: var(--primary-color);
+        color: var(--color-text); /* This was primary color -> changed till observer fix? */
         font-weight: 400;
         font-size: 20px;
     }

@@ -94,7 +94,7 @@
 @keyframes drop-down {
     from {
      opacity: 0;
-     transform: translateY(-100px);
+     transform: translateX(-100px);
     }
     to {
      opacity: 1;
@@ -112,23 +112,64 @@
     flex-direction: row;
 }
 .image-wrapper {
-    width: 30%;
-    margin: 0% 10%;
-    /* border: 5px solid red; */
+    width: auto;
+    margin: 0px 250px;
     height: 75vh;
     object-fit: cover;
     overflow: hidden;
     display: flex;
     justify-content: center;
+    transform: scale(1);
+    transition: 0.6s ease-in-out;
+    filter: grayscale(100%);
 }
 .image-wrapper img {
-    border-bottom: 5px solid var(--primary-color-turqoise);
-    border-radius: 10px;
+    border-bottom: 8px solid var(--secondary-color-orange);
+    border-radius: 20px;
+}
+.image-wrapper:hover {
+    transform: scale(1.1);
+    transition: 0.6s ease-in-out;
+    filter: grayscale(20%);
 }
 .text-wrapper {
     width: 50%;
-    border: 5px solid blue;
+    /* border: 1px solid blue; */
     height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.about-text {
+    margin-top: 200px;
+    margin-right: 100px;
+    width: 80%; 
+    /* border: 1px solid red; */
+}
+.about-text .line-1 {
+    height: 5px;
+    background: var(--primary-color-turqoise);
+    border-radius: 5px;
+    width: 20%;
+    margin: 0px 0px 50px 0px;
+}
+.about-text h1 {
+    text-align: left;
+    color: var(--secondary-color-white);
+    font-family: var(--font-family-fredoka);
+    font-weight: 400;
+    font-size: 40px;
+    padding: 0px 0px 10px 0px;
+}
+.about-text p {
+    text-align: left;
+    color: var(--secondary-color-white);
+    font-family: var(--font-family-quicksand);
+    font-weight: 300;
+    font-size: 20px;
+    /* border: 1px solid green; */
+    width: 80%;
+    height: auto;
+    padding: 20px;
 }
 
 /* -- Section 3 -- */
@@ -407,7 +448,6 @@ form button:active {
     box-shadow: var(--secondary-color-black) 0 3px 7px inset;
     transform: translateY(2px);
 }
-
 .social {
     width: 275px;
     display: flex;
@@ -440,6 +480,17 @@ form button:active {
     }
 
     /* -- Section 2 -- */
+    .section-2 {
+        flex-direction: column;
+    }
+    .image-wrapper {
+        width: 80%;
+        height: 50vh;
+    }
+    .text-wrapper {
+        width: 80%;
+        height: 50vh;
+    }
 
     /* -- Section 3 -- */
     .carousel img {
