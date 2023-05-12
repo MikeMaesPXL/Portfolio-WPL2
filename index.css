@@ -81,16 +81,6 @@
     margin: 20px 0px;
     font-weight: 600;
 }
-.social {
-    width: 275px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 35px 0px;
-}
-.text-div .social:hover {
-    cursor: pointer;
-}
 /* - Text animation - */
 .overflow-hidden {
     overflow: hidden;
@@ -104,7 +94,7 @@
 @keyframes drop-down {
     from {
      opacity: 0;
-     transform: translateY(-100px);
+     transform: translateX(-100px);
     }
     to {
      opacity: 1;
@@ -117,6 +107,69 @@
 .section-2 {
     min-height: 100vh;
     background-color: var(--secondary-color-dark-blue);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.image-wrapper {
+    width: auto;
+    margin: 0px 250px;
+    height: 75vh;
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    transform: scale(1);
+    transition: 0.6s ease-in-out;
+    filter: grayscale(100%);
+}
+.image-wrapper img {
+    border-bottom: 8px solid var(--secondary-color-orange);
+    border-radius: 20px;
+}
+.image-wrapper:hover {
+    transform: scale(1.1);
+    transition: 0.6s ease-in-out;
+    filter: grayscale(20%);
+}
+.text-wrapper {
+    width: 50%;
+    /* border: 1px solid blue; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.about-text {
+    margin-top: 200px;
+    margin-right: 100px;
+    width: 80%; 
+    /* border: 1px solid red; */
+}
+.about-text .line-1 {
+    height: 5px;
+    background: var(--primary-color-turqoise);
+    border-radius: 5px;
+    width: 20%;
+    margin: 0px 0px 50px 0px;
+}
+.about-text h1 {
+    text-align: left;
+    color: var(--secondary-color-white);
+    font-family: var(--font-family-fredoka);
+    font-weight: 400;
+    font-size: 40px;
+    padding: 0px 0px 10px 0px;
+}
+.about-text p {
+    text-align: left;
+    color: var(--secondary-color-white);
+    font-family: var(--font-family-quicksand);
+    font-weight: 300;
+    font-size: 20px;
+    /* border: 1px solid green; */
+    width: 80%;
+    height: auto;
+    padding: 20px;
 }
 
 /* -- Section 3 -- */
@@ -153,10 +206,10 @@
     border-width: 0;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px, rgba(0, 0, 0, 0.4) 0px 7px 13px -3px, rgba(0, 0, 0, 0.3) 0px -3px 0px inset;
     box-sizing: border-box;
-    color: #f4a724;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
+    font-family: var(--font-family-fredoka);
+    width: 150px;
     height: 48px;
     justify-content: center;
     line-height: 1;
@@ -256,8 +309,156 @@
 
 /* -- Section 5 -- */
 .section-5 {
-    min-height: 50vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+/* .section-5 h2 {
+    color: var(--secondary-color-white);
+    font-weight: 600;
+    font-family: var(--font-family-fredoka);
+    margin-bottom: 20px;
+}
+.section-5 input, .section-5 textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background-color: var(--secondary-color-white);
+    font-size: 16px;
+    font-weight: 200;
+    font-family: var(--font-family-quicksand);
+}
+.section-5 button a {
+    text-decoration: none;
+    color: var(--secondary-color-black);
+}
+.section-5 button {
+    align-items: center;
+    appearance: none;
+    background-color: var(--primary-color-turqoise);
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px, rgba(0, 0, 0, 0.4) 0px 7px 13px -3px, rgba(0, 0, 0, 0.3) 0px -3px 0px inset;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--font-family-fredoka);
+    height: 48px;
+    width: 150px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+.section-5 button:focus {
+    box-shadow: var(--secondary-color-black) 0 0 0 1.5px inset, rgba(0, 0, 0, 0.5) 0 2px 4px, rgba(0, 0, 0, 0.4) 0 7px 13px -3px, var(--secondary-color-black) 0 -3px 0 inset;
+}
+.section-5 button:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0 4px 8px, rgba(0, 0, 0, 0.4) 0 7px 13px -3px, rgba(7, 132, 195, 0.3) 0 -2px 0 inset;
+    transform: translateY(-2px);
+}
+.section-5 button:active {
+    box-shadow: var(--secondary-color-black) 0 3px 7px inset;
+    transform: translateY(2px);
+} */
+
+
+form {
+    background-color: var(--secondary-color-dark-blue);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+form h2 {
+    color: var(--secondary-color-white);
+    font-weight: 600;
+    font-family: var(--font-family-fredoka);
+    margin-bottom: 20px;
+}
+form input, form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background-color: var(--secondary-color-white);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-family-quicksand);
+}
+form button {
+    text-decoration: none;
+    color: var(--secondary-color-black);
+}
+form button {
+    align-items: center;
+    appearance: none;
+    background-color: var(--primary-color-turqoise);
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px, rgba(0, 0, 0, 0.4) 0px 7px 13px -3px, rgba(0, 0, 0, 0.3) 0px -3px 0px inset;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--font-family-fredoka);
+    height: 48px;
+    width: 150px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+form button:focus {
+    box-shadow: var(--secondary-color-black) 0 0 0 1.5px inset, rgba(0, 0, 0, 0.5) 0 2px 4px, rgba(0, 0, 0, 0.4) 0 7px 13px -3px, var(--secondary-color-black) 0 -3px 0 inset;
+}
+form button:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0 4px 8px, rgba(0, 0, 0, 0.4) 0 7px 13px -3px, rgba(7, 132, 195, 0.3) 0 -2px 0 inset;
+    transform: translateY(-2px);
+}
+form button:active {
+    box-shadow: var(--secondary-color-black) 0 3px 7px inset;
+    transform: translateY(2px);
+}
+.social {
+    width: 275px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 0px;
+}
+.social:hover {
+    cursor: pointer;
+}
+
 
 /* -- Media queries -- */
 @media screen and (max-width: 900px) {
@@ -277,12 +478,19 @@
     .text-div p {
         font-size: 18px;
     }
-    .text-div .social {
-        position: fixed;
-        bottom: 0;
-    }
 
     /* -- Section 2 -- */
+    .section-2 {
+        flex-direction: column;
+    }
+    .image-wrapper {
+        width: 80%;
+        height: 50vh;
+    }
+    .text-wrapper {
+        width: 80%;
+        height: 50vh;
+    }
 
     /* -- Section 3 -- */
     .carousel img {

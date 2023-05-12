@@ -29,17 +29,34 @@
             <!-- <h1>Maes Mike</h1> -->
             <p class="intro drop-down-2">Hi! I'm a passionate student and graphic designer located in Zonhoven, Belgium. I love expressing my creative thoughts through my work.</p>
             <p class="cta drop-down-2">Be sure to take a look around!</p>
-            <div class="social">
-                <i href="#" class="fa-brands fa-linkedin-in fa-2x" style="color: #00BCB0;"></i>
-                <i href="#" class="fa-regular fa-envelope fa-2x" style="color: #00BCB0;"></i>
-                <i href="#" class="fa-regular fa-paper-plane fa-2x" style="color: #00BCB0;"></i>
-            </div>
         </div>
     </section>
 
     <section id="about" class="section-2">
         <div class="image-wrapper">
-            <img src="" alt="img">
+            <img src="/images/about-me.jpg" alt="img">
+        </div>
+        <div class="text-wrapper">
+            <div class="about-text">
+                <h1>ABOUT ME</h1>
+                <div class="line-1"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Nulla consectetur vitae quo officia possimus itaque odit ea, 
+                officiis voluptas nobis, neque magnam eius repudiandae dolorum 
+                expedita. Iusto aspernatur cupiditate voluptate?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Nulla consectetur vitae quo officia possimus itaque odit ea, 
+                officiis voluptas nobis, neque magnam eius repudiandae dolorum 
+                expedita. Iusto aspernatur cupiditate voluptate?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Nulla consectetur vitae quo officia possimus itaque odit ea, 
+                    officiis voluptas nobis, neque magnam eius repudiandae dolorum 
+                    expedita. Iusto aspernatur cupiditate voluptate?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Nulla consectetur vitae quo officia possimus itaque odit ea, 
+                    officiis voluptas nobis, neque magnam eius repudiandae dolorum 
+                    expedita. Iusto aspernatur cupiditate voluptate?</p>
+            </div>
         </div>
     </section>
 
@@ -55,8 +72,8 @@
                         <img src="/images/carousel/Golden_valley_2.svg" alt="img" draggable="false">
                         <img src="/images/carousel/Golden_valley_3.svg" alt="img" draggable="false">
                         <!-- <img src="/images/carousel/Cote'o_dor_black (2).svg" alt="img" draggable="false">
-                        <img src="/images/carousel/Cote'o_dor_red (2).svg" alt="img" draggable="false">
                         <img src="/images/carousel/Cote'o_dor_red (2).svg" alt="img" draggable="false"> -->
+                        <img src="/images/carousel/THE SNAKE.png" alt="img" draggable="false">
                         <img src="/images/carousel/LB_Yellow.svg" alt="img" draggable="false">
                         <img src="/images/carousel/LB_Green.svg" alt="img" draggable="false">
                         <img src="/images/carousel/LB_Black.svg" alt="img" draggable="false">
@@ -74,7 +91,35 @@
     </section>
 
     <section id="contact" class="section-5">
-
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h2>CONTACT ME!</h2>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone" required>
+            <textarea id="message" rows="4" placeholder="Type your message..."></textarea>
+            <button type="submit">Send</button>
+        </form>
+        
+        <!-- <div class="social">
+            <i href="#" class="fa-brands fa-linkedin-in fa-2x" style="color: #00BCB0;"></i>
+            <i href="#" class="fa-regular fa-envelope fa-2x" style="color: #00BCB0;"></i>
+            <i href="#" class="fa-regular fa-paper-plane fa-2x" style="color: #00BCB0;"></i>
+        </div> -->
     </section>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js">
+        const sendEmail = () => {
+                Email.send({
+                Host : "smtp.outlook.com",
+                Username : "maesmike05@gmail.com",
+                Password : "Snuitje1962",
+                To : 'Maesmike05@outlook.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+        }
+    </script> -->
 </body>
 </html>

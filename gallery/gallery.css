@@ -73,6 +73,8 @@ html {
     transition-timing-function: ease-in;
   }
 
+
+
     /* Box shadows custom
     box-shadow: 5px 5px rgba(0, 188, 176, 0.4),
       10px 10px rgba(50, 164, 220, 0.3), 15px 15px rgba(50, 164, 220, 0.2),
@@ -132,7 +134,7 @@ html {
     box-shadow: 5px 5px rgba(4, 140, 231, 0.4), 10px 10px rgba(4, 140, 231, 0.3),
       15px 15px rgba(4, 140, 231, 0.2), 20px 20px rgba(4, 140, 231, 0.1),
       25px 25px rgba(4, 140, 231, 0.05);
-  }
+  } 
 
 @media screen and (max-width: 900px) {
 
