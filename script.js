@@ -96,20 +96,6 @@ const sectionOptions = {
     threshold: 0,
 };
 
-// const sectionLightObserver = new IntersectionObserver(
-//     function(
-//         entries
-//     ) {
-//     entries.forEach(entry => {
-//         console.log(header.classList);
-//         if(!entry.isIntersecting) {
-//             header.classList.add('nav-scroll');
-//         } else {
-//             header.classList.remove('nav-scroll');
-//         }
-//     })
-// }, sectionOptions);
-
 const sectionDarkObserver = new IntersectionObserver(
     function(
         entries
@@ -129,6 +115,21 @@ const sectionDarkObserver = new IntersectionObserver(
 // sectionDarkObserver.observe(sectionOne);
 sectionDarkObserver.observe(sectionTwo);
 sectionDarkObserver.observe(sectionThree);
+
+// const sectionLightObserver = new IntersectionObserver(
+//     function(
+//         entries
+//     ) {
+//     entries.forEach(entry => {
+//         console.log(header.classList);
+//         if(!entry.isIntersecting) {
+//             header.classList.add('nav-scroll');
+//         } else {
+//             header.classList.remove('nav-scroll');
+//         }
+//     })
+// }, sectionOptions);
+
 
 
 // -- Image pop up on click --
