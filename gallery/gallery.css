@@ -232,6 +232,50 @@
 }
 
 @media screen and (max-width: 736px) {
+    header .logo img {
+        height: 60px;
+    }
+    header {
+        padding: 0;
+    }
+    header .logo {
+        position: absolute;
+        top: 20px;
+        left: 25px;
+    }
+    header .menu-hamburger {
+        display: block;
+    }
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 200%;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header .nav-links ul li {
+        margin: 35px 0;
+    }
+    header .nav-links ul li a {
+        color: var(--color-text); /* This was primary color -> changed till observer fix? */
+        font-weight: 400;
+        font-size: 20px;
+    }
     .grid {
         width: 90%;
         justify-content: center;
