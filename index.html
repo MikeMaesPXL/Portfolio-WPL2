@@ -1,124 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Mike Maes</title>
-    <link rel="stylesheet" href="index.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/6c14ee3bf9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script defer src="script.js"></script>
-</head>
+
+    <!-- Favicons -->
+        <link rel="icon" type="image/x-icon" href="/assets/images/logo-nav.png">
+
+    <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Stylesheets -->
+        <link rel="stylesheet" href="style.css">
+
+    </head>
 <body>
-    <header>
-        <a href="/index.html" class="logo"><img src="/images/turquoise_logo.svg" alt="logo"></a>
-        <div class="nav-links">
-            <ul id="nav-ul">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#gallery">GALLERY</a></li>
-                <li><a href="#course-work">COURSE-WORK</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </div>
-        <i class="fa fa-bars fa-2x menu-hamburger"></i>
-    </header>
-    <section class="section-1">
-        <div class="text-div overflow-hidden">
-            <h1 class="drop-down">Maes Mike</h1>
-            <!-- <h1>Maes Mike</h1> -->
-            <p class="intro drop-down-2">Hi! I'm a passionate student and graphic designer located in Zonhoven, Belgium. I love expressing my creative thoughts through my work.</p>
-            <p class="cta drop-down-2">Be sure to take a look around!</p>
-        </div>
-    </section>
 
-    <section id="about" class="section-2">
-        <div class="image-wrapper">
-            <img src="/images/about-me.jpg" alt="img">
+  <!-- ------- Navbar ------- -->
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+        <div class="col-md-10">
+          <ul class="custom-menu d-flex justify-content-around">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="wpl.html">Werkplekleren</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
-        <div class="text-wrapper">
-            <div class="about-text">
-                <h1>ABOUT ME</h1>
-                <div class="line-1"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Nulla consectetur vitae quo officia possimus itaque odit ea, 
-                officiis voluptas nobis, neque magnam eius repudiandae dolorum 
-                expedita. Iusto aspernatur cupiditate voluptate?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Nulla consectetur vitae quo officia possimus itaque odit ea, 
-                officiis voluptas nobis, neque magnam eius repudiandae dolorum 
-                expedita. Iusto aspernatur cupiditate voluptate?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Nulla consectetur vitae quo officia possimus itaque odit ea, 
-                    officiis voluptas nobis, neque magnam eius repudiandae dolorum 
-                    expedita. Iusto aspernatur cupiditate voluptate?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Nulla consectetur vitae quo officia possimus itaque odit ea, 
-                    officiis voluptas nobis, neque magnam eius repudiandae dolorum 
-                    expedita. Iusto aspernatur cupiditate voluptate?</p>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Mike.</a>
+      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+        <span></span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ------- Portfolio Section ------- -->
+  <main id="main">
+    <section class="section site-portfolio">
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
+            <h2>Hello! I am Mike Maes</h2>
+            <p class="mb-0">Student Graphic Designer &amp; Web Developer</p>
+          </div>
+          <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
+            <div id="filters" class="filters">
+              <a href="#" data-filter="*" class="active">All</a>
+              <a href="#" data-filter=".design">Design</a>
+              <a href="#" data-filter=".web">Web</a>
+              <a href="#" data-filter=".branding">Branding</a>
             </div>
+          </div>
         </div>
+        <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
+          <div class="item web branding col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="projects/kleine-zorg.html" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Kleine Zorg</h3>
+                <span>Web &amp; Branding</span>
+              </div>
+              <img class="img-fluid" src="/assets/images/Head Logo.png" alt="Kleine Zorg">
+            </a>
+          </div>
+          <div class="item design col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="projects/PS-AI.html" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>PS &amp; AI projects</h3>
+                <span>Design</span>
+              </div>
+              <img class="img-fluid" src="/assets/images/Astronaut -BW.png" alt="PS-AI projects">
+            </a>
+          </div>
+          <div class="item design branding col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="/projects/tinyhouse.html" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>TinyHouse</h3>
+                <span>Design &amp; Branding</span>
+              </div>
+              <img class="img-fluid" src="/assets/images/TinyHouse.png" alt="TinyHouse">
+            </a>
+          </div>
+          <div class="item design col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="#" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Redesign Côte d'Or</h3>
+                <span>Design</span>
+              </div>
+              <img class="img-fluid" src="/assets/images/CoteDor - Redesign.png" alt="Côte d'Or redesign">
+            </a>
+          </div>
+          <div class="item design col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="#" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Title</h3>
+                <span>Design</span>
+              </div>
+              <img class="img-fluid" src="/assets/images/AstronautAndMoon.png" alt="Filler">
+            </a>
+          </div>
+          <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="#" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>Title</h3>
+                <span>Branding</span>
+              </div>
+              <img class="img-fluid" src="/assets/images/THE SNAKE.png" alt="Filler">
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <section id="gallery" class="section-3">
-            <div class="gallery-text">
-                <h1 class="title">Gallery</h1>
-            </div>
-            <div class="container-carousel">
-                <div class="wrapper">
-                    <i id="left" class="fa-solid fa-angle-left"></i>
-                    <div class="carousel">
-                        <img src="/images/carousel/Golden_valley_1.svg" alt="img" draggable="false">
-                        <img src="/images/carousel/Golden_valley_2.svg" alt="img" draggable="false">
-                        <img src="/images/carousel/Golden_valley_3.svg" alt="img" draggable="false">
-                        <!-- <img src="/images/carousel/Cote'o_dor_black (2).svg" alt="img" draggable="false">
-                        <img src="/images/carousel/Cote'o_dor_red (2).svg" alt="img" draggable="false"> -->
-                        <img src="/images/carousel/THE SNAKE.png" alt="img" draggable="false">
-                        <img src="/images/carousel/LB_Yellow.svg" alt="img" draggable="false">
-                        <img src="/images/carousel/LB_Green.svg" alt="img" draggable="false">
-                        <img src="/images/carousel/LB_Black.svg" alt="img" draggable="false">
-                    </div>
-                    <i id="right" class="fa-solid fa-angle-right"></i>
-                </div>
-            </div>   
-            <div class="gallery-cta">
-                <button class="button-gallery" role="button"><a href="/gallery/gallery.html">Explore more!</a></button>
-            </div>
-    </section>
-
-    <section id="course-work" class="section-4">
-
-    </section>
-
-    <section id="contact" class="section-5">
-        <form onsubmit="sendEmail(); reset(); return false;">
-            <h2>CONTACT ME!</h2>
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="text" id="phone" placeholder="Phone" required>
-            <textarea id="message" rows="4" placeholder="Type your message..."></textarea>
-            <button type="submit">Send</button>
-        </form>
-        
-        <!-- <div class="social">
-            <i href="#" class="fa-brands fa-linkedin-in fa-2x" style="color: #00BCB0;"></i>
-            <i href="#" class="fa-regular fa-envelope fa-2x" style="color: #00BCB0;"></i>
-            <i href="#" class="fa-regular fa-paper-plane fa-2x" style="color: #00BCB0;"></i>
-        </div> -->
-    </section>
-    <!-- <script src="https://smtpjs.com/v3/smtp.js">
-        const sendEmail = () => {
-                Email.send({
-                Host : "smtp.outlook.com",
-                Username : "maesmike05@gmail.com",
-                Password : "",
-                To : 'Maesmike05@outlook.com',
-                From : document.getElementById("email").value,
-                Subject : "New Contact Form Enquiry",
-                Body : "And this is the body"
-            }).then(
-            message => alert(message)
-            );
-        }
-    </script> -->
+  <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="assets/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 </body>
 </html>
