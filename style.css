@@ -181,27 +181,87 @@
     border: 1px solid transparent;
   }
 
+  /* ------- About ------- */
   #about>.container #div-about {
     height: 800px;
   }
+
+  /* ------- WPL ------- */
+  .wpl .icon-box {
+    text-align: center;
+    background: rgba(204, 204, 204, 0.1);
+    padding: 80px 20px;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .wpl .icon-box .icon {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    background: #3e1c2a;
+    opacity: 0.5;
+    border-radius: 5px;
+    transition: all 0.3s ease-out 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+  }
+  
+  .wpl .icon-box .icon i {
+    color: #000000;
+    font-size: 28px;
+  }
+  
+  .wpl .icon-box .icon::before {
+    position: absolute;
+    content: "";
+    left: -8px;
+    top: -8px;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease-out 0s;
+    transform: translateZ(-1px);
+  }
+  
+  .wpl .icon-box h4 {
+    margin-bottom: 15px;
+  }
+  
+  .wpl .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  .wpl .icon-box:hover .icon {
+    opacity: 1;
+  }
+
+  .button-wpl {
+    margin-top: 50px;
+  }
+
   
   /* ------- Header ------- */
   /* Custom Navmenu */
   .custom-navmenu {
-    background: #0d1e2d;
+    background: #3e1c2a;
+    /* opacity: 0.5; */
   }
-  
-  .custom-menu {
+
+  .custom-navmenu>.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
   }
 
   .custom-navmenu .custom-menu,
   .custom-navmenu .custom-menu li {
     padding: 0;
-    margin: 0 0 0 80px;
+    margin: 0;
     list-style: none;
   }
   
@@ -223,6 +283,7 @@
     text-decoration: underline;
   }
   
+
   /* Custom Navbar */
   .custom-navbar {
     padding-top: 50px;
@@ -310,7 +371,12 @@
       padding-left: 0;
     }
     .custom-navbar>.container {
-        margin: 0 1rem;
+      margin: 0 1rem;
+    }
+
+    .custom-navmenu .custom-menu,
+    .custom-navmenu .custom-menu li {
+      margin: 0;
     }
     .custom-navmenu>.container  {
       width: 100%;
@@ -318,12 +384,15 @@
     }
     .custom-navmenu>.container div {
       display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .custom-menu {
       flex-direction: column;
       align-items: center; 
-      justify-content: center;
     }
+
+
     .custom-menu li a {
         font-size: 14px;
     }
