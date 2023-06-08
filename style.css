@@ -1,5 +1,5 @@
-body {
-    font-family: "Inconsolata", monospace;
+  body {
+    font-family: 'Hind Madurai', sans-serif;
     color: #0d1e2d;
   }
   
@@ -180,6 +180,10 @@ body {
     box-shadow: none;
     border: 1px solid transparent;
   }
+
+  #about>.container #div-about {
+    height: 800px;
+  }
   
   /* ------- Header ------- */
   /* Custom Navmenu */
@@ -299,6 +303,7 @@ body {
     outline: none;
   }
 
+
   @media (max-width: 780px) {
     .custom-navbar>.container {
       padding-right: 0;
@@ -307,7 +312,31 @@ body {
     .custom-navbar>.container {
         margin: 0 1rem;
     }
+    .custom-navmenu>.container  {
+      width: 100%;
+      margin: auto;
+    }
+    .custom-navmenu>.container div {
+      display: flex;
+    }
+    .custom-menu {
+      flex-direction: column;
+      align-items: center; 
+      justify-content: center;
+    }
     .custom-menu li a {
-        font-size: 10px;
+        font-size: 14px;
+    }
+    .about>.container #div-about {
+      padding: 0;
+      margin: 0;
+    }
+    .div-about-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .div-about-img img {
+      display: none;
     }
   }
